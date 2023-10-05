@@ -1,0 +1,68 @@
+body {
+    background-image: url("image/back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: wheat;
+}
+
+.main-container {
+    font-size: 16px;
+    border: 5px solid rgb(15, 39, 18);
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    color:white;
+    background-color: olivedrab;
+    border-radius: 20px;
+}
+
+.label {
+    display: block; /*текст с новой строки*/
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.display-inline {
+    display: inline;
+}
+
+.container {
+    font-size: 20px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+input, textarea, select {
+    font-size: inherit;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.btn{
+    background-color: rgb(4, 176, 245);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    font-size: 20px;
+}
+.nazad 
+{
+    margin-top: 10px;
+    padding-top: 20px;
+    padding-bottom: 5;
+    text-decoration: none;
+}
+a
+{
+    text-decoration: none;
+    border:2px solid white;
+    color:white;
+}
