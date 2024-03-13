@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="mb-5">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <div class="d-flex justify-content-start">
+          <a class="navbar-brand" href="#">
+            <img src="../img/person-running-solid.svg" height="64" alt="logo">
+          </a>
+
+          <div class="row-2">
+            <h1 class="row">Быстрые ноги</h1>
+            <h6 class="row text-end">Экскурсии по Москве</h6>
+          </div>
+
+
+        </div>
+
+        <a class="nav-link" href="#">Личный кабинет</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="about mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <img src="../img/main.jpg" class="img-fluid" alt="photo">
+        </div>
+
+        <div class="col text-center">
+          <h3 class="">Экстремальные экскурсии</h3>
+          <p class="fs-4">Мы проводим экскурсии по самым красивым и неизведанным уголкам Москвы, включая
+            районы
+            Подмосковья.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="advantages mb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center text-uppercase color4">Наши преимущества</h2>
+        </div>
+        <div class="row gy-3">
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/helmet-safety-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Блюдем технику безопасности</h6>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/gun-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Проводники вооружены</h6>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/location-dot-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Необычайшие места</h6>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/map-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Интересные маршруты</h6>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/stopwatch-20-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Работаем 20 лет</h6>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/suitcase-medical-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Сотрудники оснащены аптечкой</h6>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/user-doctor-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Работники сертифицированные специалисты</h6>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-md-6 col-sm-12">
+            <div class="row">
+              <img class="col mb-2" src="../img/camera-solid.svg" height="60" alt="safety">
+              <h6 class="text-center">Организовываем фотосессии</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <h3>Список пешеходных маршрутов</h3>
+  <br>
+  <div class="row">
+    <div class="col-sm-4 col-12">
+      <input type="text" class="form-control" id="listRoutes" placeholder="Поиск по названию">
+    </div>
+    <div class="col-sm-4 col-12">
+      <select class="form-select" id="objectSearch">
+        <option value="">Основной объект</option>
+      </select>
+    </div>
+  </div>
+  <br>
+
+  <table class="table table-bordered" id="listTable">
+    <tr>
+      <th>Название</th>
+      <th>Описани е</th>
+      <th>Основные объекты</th>
+      <th></th>
+    </tr>
+  </table>
+
+  <br>
+
+
+  <div id="paginationButtons" align="center">
+  </div>
+  <div align="center">
+    <button class="btn btn-primary" onclick="prevPage()">Предыдущая</button>
+    <button class="btn btn-primary" onclick="nextPage()">Следующая</button>
+  </div>
+
+  <br><br>
+
+  <div class="guides">
+    <h3>Доступные гиды по маршруту <b id="routeName"></b></h3>
+    <br>
+    <div class="row">
+      <div class="col-sm-4 col-12">
+        <select class="form-select" id="listRoutes">
+          <option value="0">Язык экскурсии</option>
+        </select>
+      </div>
+
+      <div class="col-sm-4 col-12">
+        <div class="formGroup">
+          <label for="inputField exp">Опыт работы:</label>
+          <input type="number" class="form-control exp" placeholder="От" min="0">
+          <input type="number" class="form-control exp" placeholder="До" min="0">
+        </div>
+      </div>
+    </div>
+    <br>
+    <table class="table table-bordered" id="guidesTable">
+      <thead>
+        <tr>
+          <th></th>
+          <th>ФИО</th>
+          <th>Языки</th>
+          <th>Опыт работы (г.)</th>
+          <th>Стоимость услуг в час</th>
+          <th></th>
+        </tr>
+      </thead>
+    </table>
+    <div class="container">
+      <button type="button" class="btn btn-primary " id="orderBtn" data-bs-toggle="modal"
+        data-bs-target="#myModal">Оформить заявку</button>
+    </div>
+  </div>
+
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title">Оформление заявки</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <div class="alert alert-success alert-dismissible" id="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>Успешно!</strong> Ваша заявка принята.
+          </div>
+          <p>ФИО гида: <b id="guideName"></b></p>
+          <p>Название маршрута: <b id="routeName1"></b></p>
+
+          <form action="#" method="post" id="send">
+            <div class="row">
+              <div class="col-sm-4">
+                <label class="form-label">Дата экскурсии:</label>
+                <input class="form-control" type="date" name="" id="date" required>
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label">Время начала:</label>
+                <input class="form-control" type="time" name="" id="time" step="1800" min="09:00" max="23:00" required>
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label">Длительность экскурсии:</label>
+                <select class="form-select" id="duration">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <div class="col-sm-4">
+                <label class="form-label">Количество человек:</label>
+                <input class="form-control" type="number" name="" id="quantity" min="1" max="20" value="1" required>
+              </div>
+            </div>
+            <br>
+            <p>Дополнительные опции:</p>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="check" name="check">
+              <label class="form-check-label" for="check">Скидка для пенсионеров</label>
+              <p>Цена ниже на 25%</p>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="check2" name="check2">
+              <label class="form-check-label" for="check2">Сопровождение сурдопереводчика (макс. 10 человек)</label>
+              <p>Цена выше на 15%, если посетителей от 1 до 5, на 25%, если от 5 до 10</p>
+            </div>
+            <br>
+            <p>Итоговая стоимость: <b id="summa"></b></p>
+            <br>
+            <button type="submit" class="btn btn-success">Отправить</button>
+            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Отменить</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <footer class="footer">
+    <h6><b>Контакты:</b></h6>
+    <h6>Телефон 8 800 555 35 35</h6>
+    <h6>VK: @extremeex</h6>
+    <p>&copy 2024</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <script src="js.js"></script>
+
+  <script type="text/javascript">
+    var today = new Date();
+    var dd = today.getDate() + 1;
+    var mm = today.getMonth() + 1;
+    var yyyy = today.getFullYear();
+    if (dd < 10) {
+      dd = '0' + dd
+    }
+    if (mm < 10) {
+      mm = '0' + mm
+    }
+    today = yyyy + '-' + mm + '-' + dd;
+    document.getElementById("date").setAttribute("min", today);
+    document.getElementById("date").setAttribute("value", today);
+  </script>
+
+</body>
+
+</html>

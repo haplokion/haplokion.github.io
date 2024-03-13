@@ -1,0 +1,43 @@
+:root {
+    --color1: #D3D3D3;
+    --color2: #C0C0C0;
+    --color3: #FFD700;
+    --color4: #0000FF;
+}
+
+header, footer {
+    background: linear-gradient(135deg, var(--color1) 0%, var(--color2) 35%, var(--color2) 100%);
+}
+
+.color1{
+    color: var(--color1);
+}
+
+.color2{
+    color: var(--color2);
+}
+
+.color3{
+    color: var(--color3);
+}
+
+.color4{
+    color: var(--color4);
+}
+
+.bg1 {
+    background-color: var(--color1);
+}
+
+.bg2 {
+    background-color: var(--color2);
+}
+
+.bg3 {
+    background-color: var(--color3);
+}
+
+.bg4 {
+    background-color: var(--color4);
+}
+
